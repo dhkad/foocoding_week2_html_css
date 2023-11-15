@@ -1,0 +1,106 @@
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+
+}
+
+main{
+    
+    flex-direction: column;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 10 px;
+    
+}
+
+#grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  #grid-flex .grid-item {
+    flex-basis: 46%;
+    background-color: rgb(42, 124, 165);
+    text-align: center;
+    
+     }
+
+.grid-item img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    background-color: white;
+    transform: scale(0.8);
+  }
+  
+  .grid-item img:hover {
+    transform: scale(1);
+  }
+
+  /* Style for the first item */
+  #grid-flex .grid-item:nth-child(1) {
+    flex-basis: 99%;
+    background-color: rgb(42, 52, 165);
+  }
+  
+
+  h1{
+    text-align: center;
+    font-size: 4rem;
+    background-color: cornflowerblue;
+    
+  }
+
+ h2{
+    text-align: center;
+    font-size: 2rem;
+        
+  }
+
+  p {
+    font-family: inherit;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+
+  /* Styling for tabet */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    #grid-flex .grid-item {
+        flex-basis: 28%;
+        justify-content: space-between
+    }
+
+    #grid-flex .grid-item:nth-child(1) {
+      flex-basis: 48%;
+      background-color: aliceblue;
+    }
+
+    #grid-flex .grid-item:nth-child(2) {
+      flex-basis: 48%;
+      background-color: aliceblue;
+    }
+   
+  }
+
+  /*Styling for desktop*/
+  @media screen and (min-width: 1024px) {
+    #grid-flex {
+        flex-basis: 40%;
+        justify-content: space-between
+    }
+
+    #grid-flex .grid-item {
+      flex-basis: 23%;
+    }
+    
+    #grid-flex .grid-item:nth-child(1) {
+      flex-basis: 48%;
+      background-color: aliceblue;
+    }
+  }
